@@ -1,0 +1,17 @@
+{
+  "name": "convite_aniversario",
+  "version": "1.0.0",
+  "description": "Landing Page Convite de Aniversário",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "parcel": "parcel src/index.html src/styles/sass/main.scss src/scripts/main.js"
+  },
+  "author": "Dev-Oliveira",
+  "license": "ISC",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.10.3",
+    "parcel": "^2.10.3",
+    "sharp": "^0.31.3"
+  }
+}
