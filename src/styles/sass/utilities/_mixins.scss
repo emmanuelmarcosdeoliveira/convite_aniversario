@@ -1,0 +1,29 @@
+// Mixins de Breakpoints
+
+$ultra: 87.51rem;
+$desktop: 87.5rem;
+$tablet: 48rem;
+$mobile: 30rem;
+
+@mixin breakpoint($size) {
+  @if $size == ultra {
+    @media (min-width: $ultra) {
+      @content;
+    }
+  }
+  @if $size == desktop {
+    @media (max-width: $desktop) {
+      @content;
+    }
+  }
+  @if $size == tablet {
+    @media (max-width: $tablet) {
+      @content;
+    }
+  }
+  @if $size == mobile {
+    @media (max-width: $mobile) {
+      @content;
+    }
+  }
+}

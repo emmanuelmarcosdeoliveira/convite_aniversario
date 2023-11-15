@@ -1,0 +1,24 @@
+@use "../utilities/variables" as var;
+@use "../utilities/function" as fun;
+@use "../utilities/mixins" as mix;
+.button {
+  padding: 12px;
+  font-size: 18px;
+  font-weight: 700;
+  white-space: nowrap;
+  transition: 500ms ease;
+  &:hover {
+    background-color: rgb(50, 205, 146);
+  }
+
+  &--primary {
+    color: var.$cor1;
+    background-color: var.$cor3;
+    border-radius: 5px;
+    box-shadow: 2px 4px 8px 8px inset rgba($color: #fff, $alpha: 0.3);
+    @include mix.breakpoint(tablet) {
+      display: flex;
+      align-items: center;
+    }
+  }
+}

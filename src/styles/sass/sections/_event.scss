@@ -1,0 +1,86 @@
+@use "../utilities/function" as fun;
+@use "../utilities/mixins" as mix;
+
+.event {
+  padding: 80px 0;
+  &--location {
+    background-image: linear-gradient(
+      67.7deg,
+      rgba(252, 185, 125, 1) -0.9%,
+      rgba(245, 231, 106, 1) 22.8%,
+      rgba(160, 236, 208, 1) 50.3%,
+      rgba(57, 178, 209, 1) 75.5%,
+      rgba(183, 174, 193, 1) 100.2%
+    );
+    background-size: 300% 300%;
+    animation: bgcolors 15s ease infinite;
+  }
+  &--region {
+    background-image: linear-gradient(
+      67.7deg,
+      rgba(252, 185, 125, 1) -0.9%,
+      rgba(245, 231, 106, 1) 22.8%,
+      rgba(160, 236, 208, 1) 50.3%,
+      rgba(57, 178, 209, 1) 75.5%,
+      rgba(183, 174, 193, 1) 100.2%
+    );
+    background-size: 300% 300%;
+    animation: bgcolors 15s ease infinite;
+  }
+  &--when {
+    background-image: linear-gradient(
+      67.7deg,
+      rgba(252, 185, 125, 1) -0.9%,
+      rgba(245, 231, 106, 1) 22.8%,
+      rgba(160, 236, 208, 1) 50.3%,
+      rgba(57, 178, 209, 1) 75.5%,
+      rgba(183, 174, 193, 1) 100.2%
+    );
+    background-size: 300% 300%;
+    animation: bgcolors 15s ease infinite;
+  }
+
+  &--image-left {
+    .container {
+      flex-direction: row-reverse;
+    }
+  }
+  .container {
+    display: flex;
+    gap: 40px;
+    @include mix.breakpoint(mobile) {
+      flex-direction: column;
+    }
+  }
+  &__image {
+    max-width: 360px;
+    border-radius: 5px;
+    box-shadow: 4px 4px 4px rgba($color: #000000, $alpha: 0.5);
+  }
+  &__details {
+    @include mix.breakpoint(mobile) {
+      margin-right: 0;
+      margin-bottom: 40px;
+    }
+    &__title {
+      margin-bottom: 16px;
+      font-size: fun.textoem(22px);
+      font-weight: 700;
+    }
+    &__description {
+      line-height: 1.2;
+    }
+  }
+}
+
+@keyframes bgcolors {
+  0% {
+    background-color: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

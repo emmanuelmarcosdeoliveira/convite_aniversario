@@ -1,0 +1,7 @@
+// Funcão para transformar pixel em (em)
+
+@use "sass:math";
+
+@function textoem($pixel, $contexto: 16px) {
+  @return math.div($pixel, $contexto) + em;
+}
