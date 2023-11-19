@@ -1,0 +1,55 @@
+@use "../utilities/function" as fun;
+@use "../utilities/mixins" as mix;
+
+.event {
+  padding: 80px 0;
+  background: linear-gradient(
+    rgb(255, 0, 251),
+    rgb(210, 195, 30),
+    rgb(179, 0, 255)
+  );
+  background-size: 100% 300%;
+  animation: bgcolors 15s ease-in-out infinite;
+  .container {
+    display: flex;
+    @include mix.breakpoint(mobile) {
+      flex-direction: column;
+    }
+  }
+  &__details {
+    margin-right: 40px;
+    @include mix.breakpoint(mobile) {
+      margin-right: 0;
+      margin-bottom: 40px;
+    }
+    &__title {
+      margin-bottom: 16px;
+      font-size: fun.textoem(22px);
+    }
+    &__description {
+      line-height: 1.2;
+    }
+  }
+}
+
+// .event__details__title {
+//   margin-bottom: 120px;
+// }
+
+.image {
+  max-width: 360px;
+  width: 100%;
+  border-radius: 5px;
+}
+
+@keyframes bgcolors {
+  0% {
+    background-color: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

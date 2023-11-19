@@ -1,3 +1,26 @@
-body {
-  background-color: rgb(30, 210, 60);
+@use "./utilities/reset";
+@use "./utilities/variables" as var;
+@use "./utilities/mixins" as mx;
+@use "./utilities/function" as fun;
+@use "./sections/hero";
+@use "./sections/event";
+@use "./components/infosbar";
+@use "./components/buttons";
+
+.container {
+  margin: 0 auto;
+  max-width: 960px;
+  width: 100%;
+  @include mx.breakpoint(ultra) {
+    max-width: 95%;
+  }
+  @include mx.breakpoint(desktop) {
+    max-width: 90%;
+  }
+  @include mx.breakpoint(tablet) {
+    max-width: 90%;
+  }
+  @include mx.breakpoint(mobile) {
+    max-width: 80%;
+  }
 }

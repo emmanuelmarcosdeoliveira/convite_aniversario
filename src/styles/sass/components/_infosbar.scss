@@ -1,0 +1,50 @@
+@use "../utilities/variables" as var;
+@use "../utilities/function" as fun;
+@use "../utilities/mixins" as mix;
+.infos-bar.container {
+  margin-top: 40px;
+  max-width: 900px;
+  width: 100%;
+  @include mix.breakpoint(tablet) {
+    max-width: 700px;
+  }
+  @include mix.breakpoint(mobile) {
+    max-width: 300px;
+    width: 100%;
+    margin-top: 20px;
+  }
+}
+.infos-bar {
+  padding: 16px 24px;
+  background-color: var.$cor1;
+  display: flex;
+  border-radius: 5px;
+  @include mix.breakpoint(mobile) {
+    flex-direction: column;
+  }
+
+  &__infos {
+    display: flex;
+    gap: 80px;
+    flex-grow: 1;
+
+    @include mix.breakpoint(mobile) {
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+    &__item {
+      font-size: fun.textoem(14px);
+      color: var.$cor2;
+      strong {
+        font-size: fun.textoem(18px);
+        display: block;
+        color: var.$cor2;
+      }
+      span {
+        color: var.$cor2;
+        font-weight: 700;
+      }
+    }
+  }
+}

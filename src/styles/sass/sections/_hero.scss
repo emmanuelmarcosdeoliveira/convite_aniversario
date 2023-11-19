@@ -1,0 +1,75 @@
+@use "../utilities/variables" as var;
+@use "../utilities/function" as fun;
+@use "../utilities/mixins" as mix;
+
+.hero {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-image: url(../../images/image5.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+  @include mix.breakpoint(mobile) {
+    background-image: url(../../images/image3.jpg);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    padding-top: 50px;
+  }
+  .container {
+    position: relative;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color: #000000, $alpha: 0.7);
+  }
+  h1 {
+    font-family: var.$font2;
+    line-height: 1.2;
+    text-align: center;
+    font-size: max(4vw, 32px);
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+    transform: rotate(-5deg);
+    @include mix.breakpoint(mobile) {
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+  }
+  p {
+    font-size: max(2vw, 24px);
+    text-align: center;
+    line-height: 1.4;
+    margin-bottom: 1.125rem;
+    opacity: 70%;
+  }
+
+  &__logo {
+    max-width: 200px;
+    width: 100%;
+    display: block;
+    border-radius: 50%;
+    margin: 0 auto;
+  }
+  h2 {
+    font-size: max(4vw, 36px);
+    text-align: center;
+    margin-bottom: 2.25rem;
+    @include mix.breakpoint(mobile) {
+      font-size: fun.textoem(38px);
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+.hero__logo:hover {
+  color: red;
+  cursor: pointer;
+  background-image: url(../../images/image1.jpg);
+}
