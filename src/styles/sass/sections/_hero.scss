@@ -5,13 +5,13 @@
 .hero {
   padding-top: 100px;
   padding-bottom: 100px;
-  background-image: url(../../images/image5.jpg);
+  background-image: url(../../images/image4.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
   position: relative;
   @include mix.breakpoint(mobile) {
-    background-image: url(../../images/image3.jpg);
+    background-image: url(../../images/image2.jpg);
     background-repeat: no-repeat;
     background-position: top center;
     background-size: cover;
@@ -66,10 +66,4 @@
       margin-bottom: 1rem;
     }
   }
-}
-
-.hero__logo:hover {
-  color: red;
-  cursor: pointer;
-  background-image: url(../../images/image1.jpg);
 }

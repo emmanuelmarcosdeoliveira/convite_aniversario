@@ -10,6 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cairo+Play:wght@400;700&family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../src/styles/sass/main.scss">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 
 <body>
@@ -23,10 +24,10 @@
     <div class="infos-bar container">
       <ul class="infos-bar__infos">
         <li class="infos-bar__infos__item">
-          <strong>Localização</strong>
+          <strong>Onde:</strong>
           Minha Casa: São Paulo - SP
         </li>
-        <li class="infos-bar__infos__item"><strong>Zona:</strong>
+        <li class="infos-bar__infos__item"><strong>Região:</strong>
           Zona Norte
         </li>
         <li class="infos-bar__infos__item"><strong>Quando:</strong>
@@ -36,17 +37,43 @@
       <a class="button button--primary" href="#">Confirme a sua Presença</a>
     </div>
   </header>
-  <section class="event">
-    <div class="container">
+  <section class="event event--location">
+    <div class="container" data-aos="fade-up-right">
       <div class="event__details">
-        <h2 class="event__details__title">Localização:</h2>
-        <p class="event__details__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora ut iste nobis enim quae sint ad, perspiciatis, tempore similique voluptatum quasi id animi ipsa minima exercitationem. Aperiam quasi libero earum.
-          Saepe reiciendis similique natus! Consectetur incidunt quasi sapiente suscipit error odio modi saepe voluptatum iste, praesentium sunt ex dolorem vitae voluptate eligendi excepturi dolorum hic ipsa, neque aut libero consequatur.</p>
+        <h2 class="event__details__title">Onde</h2>
+        <p class="event__details__description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque aliquam exercitationem, itaque perferendis sapiente non, consequuntur quasi nihil nostrum at illo quod eius commodi vitae, obcaecati iusto rerum quaerat quam?</p>
       </div>
-      <img class="image" src="../src/images/visualizacao-3d-do-mapa.jpg" alt="Localização>
+      <img class="event__image" src="./images/location.jpg" alt="Mapa da localização">
     </div>
   </section>
-  <script src=" ../src/scripts/main.js"></script>
+
+  <section class="event event--region event--image-left">
+    <div class="container" data-aos="fade-up-left">
+      <div class="event__details">
+        <h2 class="event__details__title">Região</h2>
+        <p class="event__details__description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque aliquam exercitationem, itaque perferendis sapiente non, consequuntur quasi nihil nostrum at illo quod eius commodi vitae, obcaecati iusto rerum quaerat quam?</p>
+      </div>
+      <img class="event__image" src="./images/region.jpg" alt="Mapa da Região">
+    </div>
+  </section>
+
+  <section class="event event--when">
+    <div class=" container" data-aos="fade-up-right">
+      <div class="event__details">
+        <h2 class="event__details__title">Quando</h2>
+        <p class="event__details__description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque aliquam exercitationem, itaque perferendis sapiente non, consequuntur quasi nihil nostrum at illo quod eius commodi vitae, obcaecati iusto rerum quaerat quam?</p>
+      </div>
+      <img class="event__image" src="./images/date.jpg" alt="Calendário">
+    </div>
+  </section>
+
+
+
+
+
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script src="./scripts/main.js"></script>
 </body>
 
 </html>

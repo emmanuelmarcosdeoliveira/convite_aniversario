@@ -3,21 +3,61 @@
 
 .event {
   padding: 80px 0;
-  background: linear-gradient(
-    rgb(255, 0, 251),
-    rgb(210, 195, 30),
-    rgb(179, 0, 255)
-  );
-  background-size: 100% 300%;
-  animation: bgcolors 15s ease-in-out infinite;
+  &--location {
+    background-image: linear-gradient(
+      67.7deg,
+      rgba(252, 185, 125, 1) -0.9%,
+      rgba(245, 231, 106, 1) 22.8%,
+      rgba(160, 236, 208, 1) 50.3%,
+      rgba(57, 178, 209, 1) 75.5%,
+      rgba(183, 174, 193, 1) 100.2%
+    );
+    background-size: 300% 300%;
+    animation: bgcolors 15s ease infinite;
+  }
+  &--region {
+    background-image: linear-gradient(
+      67.7deg,
+      rgba(252, 185, 125, 1) -0.9%,
+      rgba(245, 231, 106, 1) 22.8%,
+      rgba(160, 236, 208, 1) 50.3%,
+      rgba(57, 178, 209, 1) 75.5%,
+      rgba(183, 174, 193, 1) 100.2%
+    );
+    background-size: 300% 300%;
+    animation: bgcolors 15s ease infinite;
+  }
+  &--when {
+    background-image: linear-gradient(
+      67.7deg,
+      rgba(252, 185, 125, 1) -0.9%,
+      rgba(245, 231, 106, 1) 22.8%,
+      rgba(160, 236, 208, 1) 50.3%,
+      rgba(57, 178, 209, 1) 75.5%,
+      rgba(183, 174, 193, 1) 100.2%
+    );
+    background-size: 300% 300%;
+    animation: bgcolors 15s ease infinite;
+  }
+
+  &--image-left {
+    .container {
+      flex-direction: row-reverse;
+    }
+  }
   .container {
     display: flex;
+    gap: 40px;
     @include mix.breakpoint(mobile) {
       flex-direction: column;
     }
   }
+  &__image {
+    max-width: 360px;
+    border-radius: 5px;
+    box-shadow: 4px 4px 4px rgba($color: #000000, $alpha: 0.5);
+  }
   &__details {
-    margin-right: 40px;
     @include mix.breakpoint(mobile) {
       margin-right: 0;
       margin-bottom: 40px;
@@ -25,21 +65,12 @@
     &__title {
       margin-bottom: 16px;
       font-size: fun.textoem(22px);
+      font-weight: 700;
     }
     &__description {
       line-height: 1.2;
     }
   }
-}
-
-// .event__details__title {
-//   margin-bottom: 120px;
-// }
-
-.image {
-  max-width: 360px;
-  width: 100%;
-  border-radius: 5px;
 }
 
 @keyframes bgcolors {
