@@ -6,6 +6,11 @@
   font-size: 18px;
   font-weight: 700;
   white-space: nowrap;
+  transition: 500ms ease;
+  &:hover {
+    background-color: rgb(50, 205, 146);
+  }
+
   &--primary {
     color: var.$cor1;
     background-color: var.$cor3;
