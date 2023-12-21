@@ -1,5 +1,9 @@
 @use "../utilities/variables" as var;
 
+:is(html, body) {
+  overflow-x: hidden;
+}
+
 * {
   margin: 0;
   padding: 0;
